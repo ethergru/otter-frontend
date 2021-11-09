@@ -23,9 +23,7 @@ function Landing() {
       <Header />
       <section className="landing__first-section">
         <div className="landing__first-section__title">
-          <h1>
-            Otter<span style={{ color: '#FF6854' }}>P</span>ONZI
-          </h1>
+          <h1>The Ultimate Ponzi</h1>
         </div>
         <div className="landing__first-section__subtitle">
           <p>Wen (3,3) becomes (🦦,🦦)</p>
