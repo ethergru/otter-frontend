@@ -242,7 +242,7 @@ export default function IDO() {
           </div>
         )}
         <div className={styles.claimButton}>
-          <a style={{ textDecoration: 'none' }} href="https://app.otterclam.finance">
+          <a style={{ textDecoration: 'none' }} href="https://app.theultimateponzi.com">
             <Button variant="contained" color="primary" size="medium" disableElevation>
               Enter app
             </Button>
@@ -285,14 +285,7 @@ export default function IDO() {
             ) : state.loading ? (
               <p className={styles.soldOut}>Loading...</p>
             ) : (
-              <div className={styles.soldOutContainer}>
-                <p className={styles.soldOut}>Sold Out!</p>
-                <a style={{ textDecoration: 'none' }} href="https://app.otterclam.finance">
-                  <Button variant="contained" color="primary" size="large" disableElevation>
-                    Open App
-                  </Button>
-                </a>
-              </div>
+              <p className={styles.soldOut}>We are sold out!</p>
             )}
           </div>
         ) : (

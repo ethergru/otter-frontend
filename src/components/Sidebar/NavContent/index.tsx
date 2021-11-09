@@ -34,7 +34,7 @@ function NavContent() {
       <Box className="dapp-sidebar" display="flex" justifyContent="space-between" flexDirection="column">
         <div className="dapp-menu-top">
           <Box className="branding-header">
-            <Link href="https://www.otterclam.finance" target="_blank">
+            <Link href="https://theultimateponzi.com" target="_blank">
               <img src={AppLogo} />
             </Link>
           </Box>

@@ -39,7 +39,7 @@ function Landing() {
             <div className="landing__first-section__body__subtitle">
               <p>The first store of value meme</p>
             </div>
-            <a className="landing__first-section__body__app-button" href="https://app.otterclam.finance">
+            <a className="landing__first-section__body__app-button" href="https://app.theultimateponzi.com">
               <Button variant="contained" color="primary" size="medium" disableElevation>
                 Enter APP
               </Button>
@@ -67,7 +67,7 @@ function Landing() {
             <p>Public Launch at</p>
             <span style={{ color: '#3B4BD8' }}>Nov 3, 2021 0:00 UTC</span>
             <div className="action-buttons-container">
-              <a href="https://ido.otterclam.finance">
+              <a href="https://ido.theultimateponzi.com">
                 <Button variant="outlined" color="primary" size="medium" disableElevation>
                   Claim IDO CLAMs
                 </Button>

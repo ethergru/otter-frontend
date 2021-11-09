@@ -126,7 +126,7 @@ export const calcBondDetails = createAsyncThunk(
     const standardizedDebtRatio = await bondContract.standardizedDebtRatio();
     let debtRatio = standardizedDebtRatio / Math.pow(10, 9);
 
-    const maiPrice = await getTokenPrice('MAI');
+    const maiPrice = await getTokenPrice('BUSD');
     const rawMarketPrice = (await getMarketPrice(networkID, provider)).mul(maiPrice);
     const marketPrice = formatUnits(rawMarketPrice, 9);
 

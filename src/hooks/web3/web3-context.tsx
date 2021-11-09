@@ -96,8 +96,9 @@ export const Web3ContextProvider: React.FC<{ children: ReactElement }> = ({ chil
   );
 
   const _checkNetwork = (otherChainID: number): Boolean => {
-    if (Number(otherChainID) !== Networks.POLYGON_MAINNET) {
-      alert('Please switch your wallet to Polygon network to use OtterClam!');
+    // if (Number(otherChainID) !== Networks.POLYGON_MAINNET) {
+    if (Number(otherChainID) !== Networks.POLYGON_MUMBAI) {
+      alert('Please switch your wallet to Binance Test network to use OtterClam!');
     }
 
     if (chainID !== otherChainID) {

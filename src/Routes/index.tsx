@@ -5,11 +5,11 @@ import { HashRouter } from 'react-router-dom';
 
 function Root() {
   const isApp = (): boolean => {
-    return window.location.host.includes('app');
+    return window.location.href.includes('app');
   };
 
   const isIDO = (): boolean => {
-    return window.location.host.includes('ido');
+    return window.location.href.includes('ido');
   };
 
   if (isIDO()) {
