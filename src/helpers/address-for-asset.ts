@@ -3,11 +3,11 @@ import { getAddresses, BONDS } from '../constants';
 export const addressForAsset = (bond: string, networkID: number): string => {
   const addresses = getAddresses(networkID);
 
-  if (bond === BONDS.mai) {
+  if (bond === BONDS.busd) {
     return addresses.RESERVES.MAI;
   }
 
-  if (bond === BONDS.mai_clam) {
+  if (bond === BONDS.busd_ponzi) {
     return addresses.RESERVES.MAI_CLAM;
   }
 

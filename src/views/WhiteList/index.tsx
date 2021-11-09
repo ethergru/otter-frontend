@@ -8,11 +8,11 @@ import styles from './whitelist.module.scss';
 import OtterReviewing from './images/otter_reviewing_paper.png';
 import OtterHappy from './images/otter_happy.png';
 import OtterUpset from './images/otter_upset.png';
-import { DiscordLink, TwitterLink, MediumLink, GithubLink } from '../../constants';
+import { DiscordLink, TwitterLink, MediumLink } from '../../constants';
 import DiscordIcon from './images/icon_discord.svg';
 import TwitterIcon from './images/icon_twitter.svg';
 import MediumIcon from './images/icon_medium.svg';
-import GithubIcon from './images/icon_github.svg';
+// import GithubIcon from './images/icon_github.svg';
 import FooterLogo from 'src/components/FooterLogo';
 import OtterModIcon from './images/role_icon_mods.png';
 
@@ -88,9 +88,9 @@ export default function WhiteList() {
         <Link href={DiscordLink} className="community-icon-link">
           <img src={DiscordIcon} />
         </Link>
-        <Link href={GithubLink} className="community-icon-link">
+        {/* <Link href={GithubLink} className="community-icon-link">
           <img src={GithubIcon} />
-        </Link>
+        </Link> */}
         <Link href={MediumLink} className="community-icon-link">
           <img src={MediumIcon} />
         </Link>

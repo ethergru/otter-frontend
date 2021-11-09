@@ -43,13 +43,13 @@ export const loadAppDetails = createAsyncThunk(
     const currentBlockTime = (await provider.getBlock(currentBlock)).timestamp;
     const sCLAMContract = new ethers.Contract(addresses.sCLAM_ADDRESS, StakedClamContract, provider);
     const bondCalculator = new ethers.Contract(addresses.CLAM_BONDING_CALC_ADDRESS, BondingCalcContract, provider);
-    let token = contractForReserve(BONDS.mai, networkID, provider);
+    let token = contractForReserve(BONDS.busd, networkID, provider);
     const maiAmount = await token.balanceOf(addresses.TREASURY_ADDRESS);
 
-    token = contractForReserve(BONDS.mai_clam, networkID, provider);
+    token = contractForReserve(BONDS.busd_ponzi, networkID, provider);
     const maiClamAmount = await token.balanceOf(addresses.TREASURY_ADDRESS);
-    const valuation = await bondCalculator.valuation(addressForAsset(BONDS.mai_clam, networkID), maiClamAmount);
-    const markdown = await bondCalculator.markdown(addressForAsset(BONDS.mai_clam, networkID));
+    const valuation = await bondCalculator.valuation(addressForAsset(BONDS.busd_ponzi, networkID), maiClamAmount);
+    const markdown = await bondCalculator.markdown(addressForAsset(BONDS.busd_ponzi, networkID));
     const maiClamUSD = (valuation / Math.pow(10, 9)) * (markdown / Math.pow(10, 18));
 
     const treasuryBalance = maiAmount / Math.pow(10, 18) + maiClamUSD;

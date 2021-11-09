@@ -28,16 +28,16 @@ export const changeApproval = createAsyncThunk(
 
     let approveTx;
     try {
-      if (token === 'CLAM') {
+      if (token === 'PONZI') {
         approveTx = await clamContract.approve(addresses.STAKING_HELPER_ADDRESS, ethers.constants.MaxUint256);
       }
 
-      if (token === 'sCLAM') {
+      if (token === 'sPONZI') {
         approveTx = await sCLAMContract.approve(addresses.STAKING_ADDRESS, ethers.constants.MaxUint256);
       }
 
-      const text = 'Approve ' + (token === 'CLAM' ? 'Staking' : 'Unstaking');
-      const pendingTxnType = token === 'CLAM' ? 'approve_staking' : 'approve_unstaking';
+      const text = 'Approve ' + (token === 'PONZI' ? 'Staking' : 'Unstaking');
+      const pendingTxnType = token === 'PONZI' ? 'approve_staking' : 'approve_unstaking';
 
       dispatch(fetchPendingTxns({ txnHash: approveTx.hash, text, type: pendingTxnType }));
 

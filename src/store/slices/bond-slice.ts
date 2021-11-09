@@ -50,10 +50,10 @@ export const changeApproval = createAsyncThunk(
 
     let approveTx;
     try {
-      if (bond === BONDS.mai) {
+      if (bond === BONDS.busd) {
         approveTx = await reserveContract.approve(addresses.BONDS.MAI, constants.MaxUint256);
       }
-      if (bond === BONDS.mai_clam) {
+      if (bond === BONDS.busd_ponzi) {
         approveTx = await reserveContract.approve(addresses.BONDS.MAI_CLAM, constants.MaxUint256);
       }
       dispatch(
@@ -71,13 +71,13 @@ export const changeApproval = createAsyncThunk(
     let allowance,
       balance = '0';
 
-    if (bond === BONDS.mai) {
+    if (bond === BONDS.busd) {
       allowance = await reserveContract.allowance(address, addresses.BONDS.MAI);
       balance = await reserveContract.balanceOf(address);
       balance = ethers.utils.formatEther(balance);
     }
 
-    if (bond === BONDS.mai_clam) {
+    if (bond === BONDS.busd_ponzi) {
       allowance = await reserveContract.allowance(address, addresses.BONDS.MAI_CLAM);
       balance = await reserveContract.balanceOf(address);
       balance = ethers.utils.formatUnits(balance, 'ether');
@@ -137,7 +137,7 @@ export const calcBondDetails = createAsyncThunk(
       console.log('error getting bondPriceInUSD', e);
     }
 
-    if (bond === BONDS.mai_clam) {
+    if (bond === BONDS.busd_ponzi) {
       valuation = await bondCalcContract.valuation(addresses.RESERVES.MAI_CLAM, amountInWei);
       bondQuote = await bondContract.payoutFor(valuation);
       bondQuote = bondQuote / Math.pow(10, 9);
@@ -153,7 +153,7 @@ export const calcBondDetails = createAsyncThunk(
       alert(
         "You're trying to bond more than the maximum payout available! The maximum bond payout is " +
           (maxBondPrice / Math.pow(10, 9)).toFixed(2).toString() +
-          ' CLAM.',
+          ' PONZI.',
       );
     }
 

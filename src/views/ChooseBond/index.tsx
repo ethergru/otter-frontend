@@ -41,7 +41,7 @@ function ChooseBond() {
             <p className="bond-title">
               Bond (
               <span className="bond-title-span">
-                {getTokenImage('clam')},{getTokenImage('clam')}
+                {getTokenImage('ponzi')},{getTokenImage('ponzi')}
               </span>
               )
             </p>
@@ -68,7 +68,7 @@ function ChooseBond() {
 
             <Grid item xs={6} className={`ohm-price`}>
               <Box textAlign={`${isVerySmallScreen ? 'right' : 'center'}`}>
-                <p className="bond-hero-title">CLAM Price</p>
+                <p className="bond-hero-title">PONZI Price</p>
                 <p className="bond-hero-value">
                   {isAppLoading ? <Skeleton width="100px" /> : `$${trim(marketPrice, 2)}`}
                 </p>

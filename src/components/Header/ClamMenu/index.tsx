@@ -57,7 +57,7 @@ function ClamMenu() {
         id="ohm-menu-button-hover"
       >
         <div className="ohm-button">
-          <p>BUY CLAM</p>
+          <p>BUY PONZI</p>
         </div>
 
         <Popper id={id} open={open} anchorEl={anchorEl} transition>
@@ -87,17 +87,17 @@ function ClamMenu() {
                         size="large"
                         variant="contained"
                         color="secondary"
-                        onClick={addTokenToWallet('CLAM', CLAM_ADDRESS)}
+                        onClick={addTokenToWallet('PONZI', CLAM_ADDRESS)}
                       >
-                        <Typography className="buy-text">CLAM</Typography>
+                        <Typography className="buy-text">PONZI</Typography>
                       </Button>
                       <Button
                         variant="contained"
                         size="large"
                         color="secondary"
-                        onClick={addTokenToWallet('sCLAM', sCLAM_ADDRESS)}
+                        onClick={addTokenToWallet('sPONZI', sCLAM_ADDRESS)}
                       >
-                        <Typography className="buy-text">sCLAM</Typography>
+                        <Typography className="buy-text">sPONZI</Typography>
                       </Button>
                     </Box>
                   ) : null}

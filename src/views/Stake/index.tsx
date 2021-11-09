@@ -105,8 +105,8 @@ function Stake() {
 
   const hasAllowance = useCallback(
     token => {
-      if (token === 'CLAM') return stakeAllowance > 0;
-      if (token === 'sCLAM') return unstakeAllowance > 0;
+      if (token === 'PONZI') return stakeAllowance > 0;
+      if (token === 'sPONZI') return unstakeAllowance > 0;
       return 0;
     },
     [stakeAllowance],
@@ -134,7 +134,7 @@ function Stake() {
             <Grid item>
               <div className="card-header">
                 <p className="single-stake-title">
-                  CLAM Staking ({String.fromCodePoint(0x1f9a6)}, {String.fromCodePoint(0x1f9a6)})
+                  PONZI Staking ({String.fromCodePoint(0x1f9a6)}, {String.fromCodePoint(0x1f9a6)})
                 </p>
                 <RebaseTimer />
               </div>
@@ -180,7 +180,7 @@ function Stake() {
                     <div className="stake-index">
                       <p className="single-stake-subtitle">Current Index</p>
                       <p className="single-stake-subtitle-value">
-                        {currentIndex ? <>{trim(Number(currentIndex), 3)} sCLAM</> : <Skeleton width="150px" />}
+                        {currentIndex ? <>{trim(Number(currentIndex), 3)} sPONZI</> : <Skeleton width="150px" />}
                       </p>
                     </div>
                   </Grid>
@@ -196,7 +196,7 @@ function Stake() {
                       <p>Connect Wallet</p>
                     </div>
                   </div>
-                  <p className="desc-text">Connect your wallet to stake CLAM tokens!</p>
+                  <p className="desc-text">Connect your wallet to stake PONZI tokens!</p>
                 </div>
               ) : (
                 <>
@@ -238,7 +238,7 @@ function Stake() {
 
                       <TabPanel value={view} index={0} className="stake-tab-panel">
                         <div className="stake-tab-buttons-group">
-                          {address && hasAllowance('CLAM') ? (
+                          {address && hasAllowance('PONZI') ? (
                             <div
                               className="stake-tab-panel-btn"
                               onClick={() => {
@@ -253,7 +253,7 @@ function Stake() {
                               className="stake-tab-panel-btn"
                               onClick={() => {
                                 if (isPendingTxn(pendingTransactions, 'approve_staking')) return;
-                                onSeekApproval('CLAM');
+                                onSeekApproval('PONZI');
                               }}
                             >
                               <p>{txnButtonText(pendingTransactions, 'approve_staking', 'Approve')}</p>
@@ -274,7 +274,7 @@ function Stake() {
                       </TabPanel>
 
                       <TabPanel value={view} index={1} className="stake-tab-panel">
-                        {address && hasAllowance('sCLAM') ? (
+                        {address && hasAllowance('sPONZI') ? (
                           <div
                             className="stake-tab-panel-btn"
                             onClick={() => {
@@ -282,14 +282,14 @@ function Stake() {
                               onChangeStake('unstake');
                             }}
                           >
-                            <p>{txnButtonText(pendingTransactions, 'unstaking', 'Unstake CLAM')}</p>
+                            <p>{txnButtonText(pendingTransactions, 'unstaking', 'Unstake PONZI')}</p>
                           </div>
                         ) : (
                           <div
                             className="stake-tab-panel-btn"
                             onClick={() => {
                               if (isPendingTxn(pendingTransactions, 'approve_unstaking')) return;
-                              onSeekApproval('sCLAM');
+                              onSeekApproval('sPONZI');
                             }}
                           >
                             <p>{txnButtonText(pendingTransactions, 'approve_unstaking', 'Approve')}</p>
@@ -299,13 +299,14 @@ function Stake() {
                     </Box>
 
                     <div className="help-text">
-                      {address && ((!hasAllowance('CLAM') && view === 0) || (!hasAllowance('sCLAM') && view === 1)) && (
-                        <p className="text-desc">
-                          Note: The "Approve" transaction is only needed when staking/unstaking for the first time;
-                          subsequent staking/unstaking only requires you to perform the "Stake" or "Unstake"
-                          transaction.
-                        </p>
-                      )}
+                      {address &&
+                        ((!hasAllowance('PONZI') && view === 0) || (!hasAllowance('sPONZI') && view === 1)) && (
+                          <p className="text-desc">
+                            Note: The "Approve" transaction is only needed when staking/unstaking for the first time;
+                            subsequent staking/unstaking only requires you to perform the "Stake" or "Unstake"
+                            transaction.
+                          </p>
+                        )}
                     </div>
                   </Box>
 
@@ -314,7 +315,7 @@ function Stake() {
                       <div className="data-row">
                         <p className="data-row-name-warmup">Your Staked Balance in warmup</p>
                         <p className="data-row-value">
-                          {isAppLoading ? <Skeleton width="80px" /> : <>{trim(Number(warmupBalance), 4)} CLAM</>}
+                          {isAppLoading ? <Skeleton width="80px" /> : <>{trim(Number(warmupBalance), 4)} PONZI</>}
                         </p>
                       </div>
                     )}
@@ -322,7 +323,7 @@ function Stake() {
                     <div className="data-row">
                       <p className="data-row-name">Your Balance</p>
                       <p className="data-row-value">
-                        {isAppLoading ? <Skeleton width="80px" /> : <>{trim(Number(clamBalance), 4)} CLAM</>}
+                        {isAppLoading ? <Skeleton width="80px" /> : <>{trim(Number(clamBalance), 4)} PONZI</>}
                       </p>
                     </div>
                     <div className="data-row">
@@ -331,7 +332,7 @@ function Stake() {
                         {isAppLoading ? (
                           <Skeleton width="80px" />
                         ) : (
-                          <>{new Intl.NumberFormat('en-US').format(Number(trimmedSClamBalance))} sCLAM</>
+                          <>{new Intl.NumberFormat('en-US').format(Number(trimmedSClamBalance))} sPONZI</>
                         )}
                       </p>
                     </div>
@@ -339,7 +340,7 @@ function Stake() {
                     <div className="data-row">
                       <p className="data-row-name">Next Reward Amount</p>
                       <p className="data-row-value">
-                        {isAppLoading ? <Skeleton width="80px" /> : <>{nextRewardValue} sCLAM</>}
+                        {isAppLoading ? <Skeleton width="80px" /> : <>{nextRewardValue} sPONZI</>}
                       </p>
                     </div>
 

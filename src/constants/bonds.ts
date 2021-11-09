@@ -1,4 +1,4 @@
 export const BONDS = {
-  mai: 'mai',
-  mai_clam: 'mai_clam_lp',
+  busd: 'busd',
+  busd_ponzi: 'busd_ponzi_lp',
 };

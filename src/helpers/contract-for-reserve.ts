@@ -8,11 +8,11 @@ export const contractForReserve = (
   provider: ethers.Signer | ethers.providers.Provider,
 ) => {
   const addresses = getAddresses(networkID);
-  if (bond === BONDS.mai) {
+  if (bond === BONDS.busd) {
     return new ethers.Contract(addresses.RESERVES.MAI, MimReserveContract, provider);
   }
 
-  if (bond === BONDS.mai_clam) {
+  if (bond === BONDS.busd_ponzi) {
     return new ethers.Contract(addresses.RESERVES.MAI_CLAM, MimTimeReserveContract, provider);
   }
 

@@ -6,10 +6,10 @@ import { Backdrop, Button, Link, Paper } from '@material-ui/core';
 import Shell from './shell.png';
 import SecondSection from './components/SecondSection';
 import Footer from './components/Footer';
-import { DiscordLink, GithubLink, TwitterLink } from 'src/constants';
+import { DiscordLink, TwitterLink } from 'src/constants';
 import TwitterIcon from './images/twitter.svg';
 import DiscordIcon from './images/icon_discord.svg';
-import GithubIcon from './images/icon_github.svg';
+// import GithubIcon from './images/icon_github.svg';
 import Otter01 from './images/otter_01.png';
 import CloseIcon from './images/icon_24x24_close.svg';
 import Countdown from './components/Countdown';
@@ -24,7 +24,7 @@ function Landing() {
       <section className="landing__first-section">
         <div className="landing__first-section__title">
           <h1>
-            Otter<span style={{ color: '#FF6854' }}>C</span>lam
+            Otter<span style={{ color: '#FF6854' }}>P</span>ONZI
           </h1>
         </div>
         <div className="landing__first-section__subtitle">
@@ -51,9 +51,9 @@ function Landing() {
               <Link href={DiscordLink} className="community-icon-link">
                 <img src={DiscordIcon} />
               </Link>
-              <Link href={GithubLink} className="community-icon-link">
+              {/* <Link href={GithubLink} className="community-icon-link">
                 <img src={GithubIcon} />
-              </Link>
+              </Link> */}
             </div>
           </div>
           <div className="otter01">
@@ -69,7 +69,7 @@ function Landing() {
             <div className="action-buttons-container">
               <a href="https://ido.theultimateponzi.com">
                 <Button variant="outlined" color="primary" size="medium" disableElevation>
-                  Claim IDO CLAMs
+                  Claim IDO PONZIs
                 </Button>
               </a>
             </div>

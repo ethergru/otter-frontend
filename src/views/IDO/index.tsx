@@ -7,9 +7,9 @@ import { getAddresses } from 'src/constants';
 import { useWeb3Context } from 'src/hooks';
 import { MediumLink } from '../../constants';
 import tokenIcon from '../IDO/images/icon_token.svg';
-import maiIcon from '../IDO/images/mai-icon.png';
+// import maiIcon from '../IDO/images/mai-icon.png';
 import happyOtter from '../IDO/images/otter_happy.png';
-import Countdown from '../Landing/components/Countdown';
+// import Countdown from '../Landing/components/Countdown';
 import Footer from '../Landing/components/Footer';
 import styles from './ido.module.scss';
 
@@ -163,7 +163,7 @@ export default function IDO() {
   const NotConnectedBox = () => (
     <div className={styles.notConnectedBox}>
       <p className={styles.title}>
-        Claim your <span className={styles.highlight}>CLAM</span> to join the Otter Kingdom now!
+        Claim your <span className={styles.highlight}>PONZI</span> to join the Otter Kingdom now!
       </p>
       <div className={styles.button}>
         <Button variant="contained" color="primary" size="large" disableElevation onClick={connect}>
@@ -181,7 +181,7 @@ export default function IDO() {
   const SuccessBox = () => (
     <>
       <div className={styles.presale_header_success}>
-        <h1 className={styles.successTitle}>You’ve claimed your CLAM!</h1>
+        <h1 className={styles.successTitle}>You’ve claimed your PONZI!</h1>
         <h1 className={styles.successSubTitle}>Welcome to the Otter’s Kingdom</h1>
       </div>
       <div className={styles.presale_success_content}>
@@ -195,7 +195,7 @@ export default function IDO() {
             <div className={styles.tokenAmounts}>
               <p className={styles.tokenAmount}>
                 {Intl.NumberFormat('en').format(Number(state.purchasedAmount || 0))}
-                <span className={styles.tokenTitle}>CLAM</span>
+                <span className={styles.tokenTitle}>PONZI</span>
               </p>
             </div>
           </div>
@@ -206,9 +206,9 @@ export default function IDO() {
             <div className={styles.tokenAmounts}>
               <p className={styles.tokenAmount}>
                 {Intl.NumberFormat('en').format(Number(state.purchasedAmount || 0) * 5)}
-                <span className={styles.tokenTitle}>MAI</span>
+                <span className={styles.tokenTitle}>BUSD</span>
               </p>
-              <p className={styles.tokenSubTitle}>5 MAI = 1 CLAM</p>
+              <p className={styles.tokenSubTitle}>5 BUSD = 1 PONZI</p>
             </div>
           </div>
         )}
@@ -218,7 +218,7 @@ export default function IDO() {
             <div className={styles.tokenAmounts}>
               <p className={styles.tokenAmount}>
                 {Intl.NumberFormat('en').format(Number(state.stakingAmount || 0))}
-                <span className={styles.tokenTitle}>CLAM</span>
+                <span className={styles.tokenTitle}>PONZI</span>
               </p>
             </div>
           </div>
@@ -259,7 +259,7 @@ export default function IDO() {
     <div className={styles.body}>
       <LandingHeader />
       <div className={styles.hero_section}>
-        <h1 className={styles.title}>Claim your CLAM</h1>
+        <h1 className={styles.title}>Claim your PONZI</h1>
         <p className={styles.desc}>
           The IDO will be held from Nov 1, 2021 0:00 UTC to Nov 2, 2021 23:59 UTC. Join the Otter`s Kingdom now!🦦
         </p>
@@ -272,7 +272,7 @@ export default function IDO() {
 
         <div className={styles.currentMaiBox}>
           {/* <img src={polygon} className={styles.polygon} /> */}
-          <h1>Total Raised (MAI)</h1>
+          <h1>Total Raised (BUSD)</h1>
           <h2>${Intl.NumberFormat('en').format(1001140)}</h2>
         </div>
       </div>

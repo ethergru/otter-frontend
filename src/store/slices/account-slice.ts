@@ -122,13 +122,13 @@ export const calculateUserBondDetails = createAsyncThunk(
     let allowance,
       balance = '0';
 
-    if (bond === BONDS.mai) {
+    if (bond === BONDS.busd) {
       allowance = await reserveContract.allowance(address, addresses.BONDS.MAI);
       balance = await reserveContract.balanceOf(address);
       balance = ethers.utils.formatEther(balance);
     }
 
-    if (bond === BONDS.mai_clam) {
+    if (bond === BONDS.busd_ponzi) {
       allowance = await reserveContract.allowance(address, addresses.BONDS.MAI_CLAM);
       balance = await reserveContract.balanceOf(address);
       balance = ethers.utils.formatUnits(balance, 'ether');

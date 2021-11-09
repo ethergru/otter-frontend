@@ -109,7 +109,7 @@ function BondPurchase({ bond, slippage }: IBondPurchaseProps) {
 
   const balanceUnits = () => {
     if (bond.indexOf('_lp') >= 0) return 'LP';
-    else return 'MAI';
+    else return 'BUSD';
   };
 
   async function loadBondDetails() {
@@ -196,14 +196,14 @@ function BondPurchase({ bond, slippage }: IBondPurchaseProps) {
           <div className={`data-row`}>
             <p className="bond-balance-title">You Will Get</p>
             <p className="price-data bond-balance-value">
-              {isBondLoading ? <Skeleton width="100px" /> : `${trim(bondQuote, 4) || '0'} CLAM`}
+              {isBondLoading ? <Skeleton width="100px" /> : `${trim(bondQuote, 4) || '0'} PONZI`}
             </p>
           </div>
 
           <div className={`data-row`}>
             <p className="bond-balance-title">Max You Can Buy</p>
             <p className="price-data bond-balance-value">
-              {isBondLoading ? <Skeleton width="100px" /> : `${trim(maxBondPrice, 4) || '0'} CLAM`}
+              {isBondLoading ? <Skeleton width="100px" /> : `${trim(maxBondPrice, 4) || '0'} PONZI`}
             </p>
           </div>
 
