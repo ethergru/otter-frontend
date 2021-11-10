@@ -26,16 +26,16 @@ function Landing() {
           <h1>The Ultimate Ponzi</h1>
         </div>
         <div className="landing__first-section__subtitle">
-          <p>Wen (3,3) becomes (🦦,🦦)</p>
+          <p>(🔺, 🔺) is the new (3,3)</p>
         </div>
         <div className="landing__first-section__body">
           <div className="landing__first-section__body__left">
             <div className="landing__first-section__body__title">
-              <p>The Decentralized</p>
-              <p>Reserve Memecoin</p>
+              <p>Next generation</p>
+              <p>OHM fork on BSC</p>
             </div>
             <div className="landing__first-section__body__subtitle">
-              <p>The first store of value meme</p>
+              <p>Ponzi is always. Ponzi is forever.</p>
             </div>
             <a className="landing__first-section__body__app-button" href="https://app.theultimateponzi.com">
               <Button variant="contained" color="primary" size="medium" disableElevation>
@@ -62,36 +62,18 @@ function Landing() {
           <img className="landing__first-section__footer__shell" src={Shell} alt="shell" />
           <div className="landing__first-section__footer__wave" />
           <div className="landing__first-section__footer__banner">
-            <p>Public Launch at</p>
-            <span style={{ color: '#3B4BD8' }}>Nov 3, 2021 0:00 UTC</span>
+            <p>Public Launch</p>
+            <span style={{ color: '#3B4BD8' }}>Nov 13, 2021 2PM UTC</span>
             <div className="action-buttons-container">
               <a href="https://ido.theultimateponzi.com">
                 <Button variant="outlined" color="primary" size="medium" disableElevation>
-                  Claim IDO PONZIs
+                  Join IDO
                 </Button>
               </a>
             </div>
           </div>
         </div>
       </section>
-
-      {Date.now() < 1635897600000 ? (
-        <div className="countdown">
-          <Countdown />
-        </div>
-      ) : (
-        <Stat />
-      )}
-      <SecondSection />
-      <Footer />
-      <Backdrop open={open} className="whitelist-check">
-        <div className="whitelist-container">
-          <WhiteList />
-          <div className="close-modal-button" onClick={() => setOpen(false)}>
-            <img src={CloseIcon} />
-          </div>
-        </div>
-      </Backdrop>
     </div>
   );
 }
