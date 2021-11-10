@@ -2,20 +2,20 @@ import { createTheme, responsiveFontSizes } from '@material-ui/core/styles';
 import commonSettings from './global';
 
 const colors = {
-  otterDark: '#1D2654',
-  otterBlue: '#3B4BD8',
+  otterDark: 'black',
+  otterBlue: 'black',
   otterBlueHover: '#303FC7',
   darkGray200: '#5E6E99',
   darkGray300: '#434E77',
-  clamPink: '#FF6854',
+  clamPink: 'black',
 };
 
 const lightTheme = {
-  color: '#1D2654',
+  color: '#000000',
   white: '#ffffff',
   gold: '#F8CC82',
   gray: '#A3A3A3',
-  textHighlightColor: '#3B4BD8',
+  textHighlightColor: '#000000',
   backgroundColor: '#AFCDE9',
   background: 'linear-gradient(180deg, #AFCDE9 1%, #F7FBE7 100%)',
   paperBg: '#fff',

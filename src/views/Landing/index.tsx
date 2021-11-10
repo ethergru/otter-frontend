@@ -26,7 +26,9 @@ function Landing() {
           <h1>The Ultimate Ponzi</h1>
         </div>
         <div className="landing__first-section__subtitle">
-          <p>(🔺, 🔺) is the new (3,3)</p>
+          <p>
+            (<span style={{ fontSize: '32px' }}>⟁, ⟁</span>) is the new (3,3)
+          </p>
         </div>
         <div className="landing__first-section__body">
           <div className="landing__first-section__body__left">
@@ -38,21 +40,26 @@ function Landing() {
               <p>Ponzi is always. Ponzi is forever.</p>
             </div>
             <a className="landing__first-section__body__app-button" href="https://app.theultimateponzi.com">
-              <Button variant="contained" color="primary" size="medium" disableElevation>
-                Enter APP
+              <Button
+                variant="contained"
+                style={{ backgroundColor: 'black', color: 'white' }}
+                size="medium"
+                disableElevation
+              >
+                <b>Enter APP</b>
               </Button>
             </a>
-            <div className="community-icons">
+            {/* <div className="community-icons">
               <Link href={TwitterLink} className="community-icon-link">
                 <img src={TwitterIcon} />
               </Link>
               <Link href={DiscordLink} className="community-icon-link">
                 <img src={DiscordIcon} />
               </Link>
-              {/* <Link href={GithubLink} className="community-icon-link">
+              <Link href={GithubLink} className="community-icon-link">
                 <img src={GithubIcon} />
-              </Link> */}
-            </div>
+              </Link>
+            </div> */}
           </div>
           <div className="otter01">
             <img src={Otter01} alt="otter01" />
@@ -66,8 +73,13 @@ function Landing() {
             <span style={{ color: '#3B4BD8' }}>Nov 13, 2021 2PM UTC</span>
             <div className="action-buttons-container">
               <a href="https://ido.theultimateponzi.com">
-                <Button variant="outlined" color="primary" size="medium" disableElevation>
-                  Join IDO
+                <Button
+                  variant="outlined"
+                  size="medium"
+                  disableElevation
+                  style={{ color: 'black', border: '2px solid black' }}
+                >
+                  <b>Join IDO</b>
                 </Button>
               </a>
             </div>

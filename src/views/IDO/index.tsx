@@ -166,8 +166,14 @@ export default function IDO() {
         Claim your <span className={styles.highlight}>PONZI</span> to join the Otter Kingdom now!
       </p>
       <div className={styles.button}>
-        <Button variant="contained" color="primary" size="large" disableElevation onClick={connect}>
-          Connect Your Wallet
+        <Button
+          variant="contained"
+          style={{ backgroundColor: 'black', color: 'white' }}
+          size="large"
+          disableElevation
+          onClick={connect}
+        >
+          <b>Connect Your Wallet</b>
         </Button>
       </div>
       <div>

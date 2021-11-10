@@ -1,10 +1,17 @@
 @import 'styles/_colors.scss';
 
+header .MuiLink-root {
+  color: black;
+  &:hover{
+    color: black;
+  }
+}
+
 .landing {
   background-color: #f7f9fb;
   display: flex;
   flex-direction: column;
-  color: #1d2654;
+  color: black;
 
   .whitelist-check {
     z-index: 10000;
