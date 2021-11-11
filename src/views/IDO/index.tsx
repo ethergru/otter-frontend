@@ -55,12 +55,17 @@ export type Action =
       type: 'purchased';
     }
   | {
+      type: 'loading';
+    }
+  | {
       type: 'error';
       error: Error;
     };
 
 function reducer(state: State, action: Action): State {
   switch (action.type) {
+    case 'loading':
+      return { ...state, loading: true };
     case 'load-details-complete':
       let { type, connected, ...rest } = action;
       if (state.connected && !connected) {
@@ -110,6 +115,7 @@ export default function IDO() {
   const staking = new ethers.Contract(addresses.STAKING_ADDRESS, StakingContract, provider);
 
   const loadDetails = useCallback(async () => {
+    dispatch({ type: 'loading' });
     const idoMAIAmount = ethers.utils.formatEther(await mai.balanceOf(ido.address));
     let walletMAIBalance = connected ? await mai.balanceOf(wallet) : BigNumber.from(0);
     walletMAIBalance = walletMAIBalance.lt('1000000000') ? '0' : ethers.utils.formatEther(walletMAIBalance);
